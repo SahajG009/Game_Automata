@@ -43,19 +43,22 @@ namespace Game_Automata
                 InputSimulator isim = new InputSimulator();
                 isim.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.ESCAPE);
 
-                Console.WriteLine("Starting Bouncing routine....");
+                Console.WriteLine("Starting Training routine....");
                 for (int i =0; i < 10; i++)
                 {
-                    Thread.Sleep(3000);
-                    Console.WriteLine("Sending Forward Bouncing....");
+                    /*Thread.Sleep(3000);
+                    Console.WriteLine("Sending Forward....");
                     isim.Keyboard.KeyDown(WindowsInput.Native.VirtualKeyCode.VK_W);
                     Thread.Sleep(50);
                     isim.Keyboard.KeyUp(WindowsInput.Native.VirtualKeyCode.VK_W);
-                
-                    isim.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);
+                    Console.WriteLine("Sending Jump....");
+                    isim.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);*/
               
                     // Simulate right-click
-                    isim.Mouse.RightButtonClick();
+                    Console.WriteLine("Sending Shoot...")
+                    isim.Mouse.LeftButtonDown();
+                    Thread.Sleep(50);
+                    isim.Mouse.LeftButtonUp();
                 }
             }
 
