@@ -51,7 +51,7 @@ namespace Game_Automata
                     isim.Keyboard.KeyDown(WindowsInput.Native.VirtualKeyCode.VK_W);
                     Thread.Sleep(50);
                     isim.Keyboard.KeyUp(WindowsInput.Native.VirtualKeyCode.VK_W);
-                   
+                
                     isim.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);
               
                     // Simulate right-click
