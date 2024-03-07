@@ -33,16 +33,32 @@ namespace Game_Automata
                 Console.WriteLine("Bringing TF2 on focus");
                 IntPtr h = TF2Process.MainWindowHandle;
                 SetForegroundWindow(h);
+
+                ///Thread.Sleep(3000);
+                //Console.WriteLine("Sending Keystroke");
+                //Sendkeys.SendWait("W");
+
+                Thread.Sleep(1000);
+                Console.WriteLine("Escaping Advanced Settings");
+                InputSimulator isim = new InputSimulator();
+                isim.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.ESCAPE);
+
+                Console.WriteLine("Starting Bouncing routine....");
+                for (int i =0; i < 10; i++)
+                {
+                    Thread.Sleep(3000);
+                    Console.WriteLine("Sending Forward Bouncing....");
+                    isim.Keyboard.KeyDown(WindowsInput.Native.VirtualKeyCode.VK_W);
+                    Thread.Sleep(50);
+                    isim.Keyboard.KeyUp(WindowsInput.Native.VirtualKeyCode.VK_W);
+                   
+                    isim.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);
+                    
+                    // Simulate right-click
+                    isim.Mouse.RightButtonClick();
+                }
             }
 
-            ///Thread.Sleep(3000);
-            //Console.WriteLine("Sending Keystroke");
-            //Sendkeys.SendWait("W");
-
-            Thread.Sleep(3000);
-            Console.WriteLine("Escaping Advanced Settings");
-            InputSimulator isim = new InputSimulator();
-            isim.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.ESCAPE);
 
 
             Console.WriteLine("Press a key to exit.....");
