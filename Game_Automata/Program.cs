@@ -4,7 +4,10 @@ using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+
+using WindowsInput;
 
 namespace Game_Automata
 {
@@ -31,6 +34,15 @@ namespace Game_Automata
                 IntPtr h = TF2Process.MainWindowHandle;
                 SetForegroundWindow(h);
             }
+
+            ///Thread.Sleep(3000);
+            //Console.WriteLine("Sending Keystroke");
+            //Sendkeys.SendWait("W");
+
+            Thread.Sleep(3000);
+            Console.WriteLine("Escaping Advanced Settings");
+            InputSimulator isim = new InputSimulator();
+            isim.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.ESCAPE);
 
 
             Console.WriteLine("Press a key to exit.....");
