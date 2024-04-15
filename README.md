@@ -1,4 +1,4 @@
-![Example Image](TF2.jpeg.png)
+![Main Image](TF2.jpeg)
 # Game Automata
 
 Game Automata is a project designed to create an automatic game-playing client. It is primarily designed for the game **Team Fortress 2**, but it can be adapted for other games as well. The project's main goal is to evaluate the performance of a CPU by automating gameplay and observing how the system handles the load.
