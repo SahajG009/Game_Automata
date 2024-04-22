@@ -19,7 +19,7 @@ Game Automata is a project designed to create an automatic game-playing client. 
 
 1. **Download and Setup**: Download the source code for Game Automata and set it up in your development environment.
 2. **Start Team Fortress 2**: Ensure that Team Fortress 2 is running before launching Game Automata.
-3. **Run Game Automata**: Compile and run the main file (`Program.cs`). The program will search for the `hl2` process (Team Fortress 2) and bring it to focus.
+3. **Run Game Automata**: Compile and run the main file [Program.cs](Program.cs). The program will search for the `hl2` process (Team Fortress 2) and bring it to focus.
 4. **Automated Gameplay**: The program will automate gameplay by simulating keyboard and mouse inputs. It will perform actions such as moving forward, jumping, and shooting.
 5. **Monitor CPU Performance**: Observe how your CPU performs during automated gameplay.
 
